@@ -66,11 +66,12 @@ N/A
 ## Acceptance criteria 
 1. Create and save: Creat a named deck with just two cards, save it, and check that it appears on the Home screen. 
 2. When a deck can't be saved: This should happen when the deck has no cards in it, if a question or answer to a card is blank, or when the title isn't unique/is blank. In this case, the app should give the user the appropriate error message based on what it is that they missed and not allow them to save it. They can choose to cancel and just return to Home scree nwithout the new deck. 
-3. Reveal an answer: When users start studying, check that the question appears first and they can tap the card to reveal the answer.
-4. Retry a missed card: Mark one card correct and one missed. Check that only the missed card appears in the next round. Mark it as correct and verify that the study session ends there.
-5. Make sure the data saves: Close and reopn the app to check that the cards in the saved deck on still there. 
-6. Verify resuming the study session: Exit before you finish studying a set and then reopen it. Verify that their progress was saved. (Ex: study a three-card deck. Miss the first card and get the second right before exiting Reopen the deck and check that the third card appears and the first card is queued for review.) This should work even after fully closing the app. 
-7. Verify ending the study session midway: Press "end study session" before you finish studying a set and then reopen it. Verify that the set restarts in that it goes back to the first card and has nothing saved about correctness or missed cards for review. 
+3. Editing a deck: Click on an existing deck and click on "Edit deck". Check that it will bring you to the same page as when you first created the deck, with the option to remove existing cards or add new ones. Remove a card and add a new one. Save this version and see that it has updated. 
+4. Reveal an answer: When users start studying, check that the question appears first and they can tap the card to reveal the answer.
+5. Retry a missed card: Mark one card correct and one missed. Check that only the missed card appears in the next round. Mark it as correct and verify that the study session ends there.
+6. Make sure the data saves: Close and reopn the app to check that the cards in the saved deck on still there. 
+7. Verify resuming the study session: Exit before you finish studying a set and then reopen it. Verify that their progress was saved. (Ex: study a three-card deck. Miss the first card and get the second right before exiting Reopen the deck and check that the third card appears and the first card is queued for review.) This should work even after fully closing the app. 
+8. Verify ending the study session midway: Press "end study session" before you finish studying a set and then reopen it. Verify that the set restarts in that it goes back to the first card and has nothing saved about correctness or missed cards for review. 
 
 ## Offline Behavior
 
