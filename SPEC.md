@@ -9,6 +9,7 @@ It is a flashcard studying app where users create a deck, typing a question and 
 <!-- List the main features of the app. -->
 1. Ability to create a new flashcard deck by clicking "Create new deck"
 2. Typing in questions and answers for each card and being able to click "Add" to make more cards - no limit to the amount of cards you can make in a deck. Users can also create titles for each deck. 
+3. Ability to edit existing decks by removing or adding new cards.
 3. Running through the flashcard deck where users tap the card to flip it and if they got it right, there will be an option to click "Got it!" or "Put back in the review pile." 
 4. Additional rounds of flashcard review with the incorrect/missed cards. Once all the cards have been studied once, the new incorrect/missed ones will be put into another round. This keeps going until the user was able to get all cards correct.
 5. Ability to pause the study session by exiting and coming back to it later. 
