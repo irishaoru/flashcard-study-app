@@ -7,6 +7,7 @@ import { useLibrary } from '@/features/library-provider';
 import { Action, colors, Page, ui } from '@/features/ui';
 
 const blank = (id: string): Card => ({ id, question: '', answer: '' });
+const maxTitleLength = 80;
 
 export default function CreateScreen() {
   const { deckId } = useLocalSearchParams<{ deckId?: string }>();
@@ -41,6 +42,9 @@ function DeckEditor({ deck }: { deck?: Deck }) {
     if (busy.current) return;
     const name = title.trim();
     if (!name) return setError('Enter a deck title.');
+    if (name.length > maxTitleLength && name !== deck?.title) {
+      return setError(`Use ${maxTitleLength} characters or fewer for the deck title.`);
+    }
     if (!cards.some((card) => card.question.trim() || card.answer.trim())) {
       return setError('Add at least one question and answer.');
     }
@@ -109,7 +113,9 @@ function DeckEditor({ deck }: { deck?: Deck }) {
           <View style={[ui.card, styles.fields]}>
             <Text style={ui.heading}>Deck title</Text>
             <TextInput accessibilityLabel="Deck title" value={title} onChangeText={setTitle}
+              maxLength={deck && deck.title.length > maxTitleLength ? undefined : maxTitleLength}
               placeholder="e.g. Biology" placeholderTextColor={colors.muted} style={styles.input} editable={!saving} />
+            <Text style={ui.body}>New titles can be up to {maxTitleLength} characters.</Text>
           </View>
           {cards.map((card, index) => (
             <View key={card.id} style={[ui.card, styles.fields]}>
